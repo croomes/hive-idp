@@ -11,7 +11,7 @@ git clone git@github.com:dexidp/dex.git
 cd dex/examples/k8s
 vi gencert.sh
 <change>
-DNS.1 = dex.do.storageos.net
+DNS.1 = idp.do.storageos.net
 
 ./gencert.sh
 ```
@@ -34,7 +34,7 @@ lrwxrwxrwx 1 root root     10 May 25 21:50 d43a9042.0 -> dex-ca.pem
 ## Create cluster secrets
 
 ```console
-kubectl -n dex create secret tls dex.do.storageos.net.tls --cert=ssl/cert.pem --key=ssl/key.pem
+kubectl -n dex create secret tls idp.do.storageos.net.tls --cert=ssl/cert.pem --key=ssl/key.pem
 
 kubectl -n dex create secret \
     generic github-client \
