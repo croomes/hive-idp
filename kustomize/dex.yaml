@@ -100,7 +100,6 @@ data:
         clientID: $GITHUB_CLIENT_ID
         clientSecret: $GITHUB_CLIENT_SECRET
         redirectURI: https://idp.do.storageos.net/dex/callback
-        org: kubernetes
     oauth2:
       skipApprovalScreen: true
     logger:
