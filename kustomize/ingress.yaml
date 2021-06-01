@@ -16,8 +16,8 @@ spec:
   - host: idp.do.storageos.net
     http:
       paths:       
-      - path: /dex/
-        pathType: Exact
+      - path: /dex
+        pathType: Prefix
         backend:
           service:
             name: dex
