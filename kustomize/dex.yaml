@@ -108,6 +108,7 @@ data:
     - id: hive-login
       redirectURIs:
       - 'https://idp.do.storageos.net/dex/callback'
+      - 'https://idp.do.storageos.net/callback'
       name: 'Hive login'
       secret: ZXhhbXBsZS1hcHAtc2VjcmV0
 
