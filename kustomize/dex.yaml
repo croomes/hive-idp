@@ -101,7 +101,7 @@ data:
         clientSecret: $GITHUB_CLIENT_SECRET
         redirectURI: https://idp.do.storageos.net/dex/callback
     oauth2:
-      skipApprovalScreen: false
+      skipApprovalScreen: true
     logger:
       level: debug
     staticClients:
