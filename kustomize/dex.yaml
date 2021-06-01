@@ -105,10 +105,10 @@ data:
     logger:
       level: debug
     staticClients:
-    - id: example-app
+    - id: hive-login
       redirectURIs:
-      - 'http://127.0.0.1:5555/callback'
-      name: 'Example App'
+      - 'https://idp.do.storageos.net/dex/callback'
+      name: 'Hive login'
       secret: ZXhhbXBsZS1hcHAtc2VjcmV0
 
     enablePasswordDB: true
