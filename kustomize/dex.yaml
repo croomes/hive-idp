@@ -49,10 +49,10 @@ spec:
               name: github-client
               key: client-secret
 
-        readinessProbe:
-          httpGet:
-            path: /healthz
-            port: 5556
+        # readinessProbe:
+        #   httpGet:
+        #     path: /healthz
+        #     port: 5556
       volumes:
       - name: config
         configMap:
