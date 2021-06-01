@@ -12,7 +12,7 @@ metadata:
   name: dex
   namespace: dex
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: dex
@@ -63,6 +63,18 @@ spec:
       - name: tls
         secret:
           secretName: idp.do.storageos.net.tls
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - dex
+              topologyKey: kubernetes.io/hostname
 ---
 kind: ConfigMap
 apiVersion: v1
