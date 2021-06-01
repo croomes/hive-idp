@@ -71,7 +71,7 @@ metadata:
   namespace: dex
 data:
   config.yaml: |
-    issuer: https://dex.do.storageos.net:5556
+    issuer: https://dex.do.storageos.net:5556/dex
     storage:
       type: kubernetes
       config:
