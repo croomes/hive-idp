@@ -105,13 +105,18 @@ data:
     logger:
       level: debug
     staticClients:
+    - id: kubelogin
+      name: Kubernetes
+      redirectURIs:
+      - http://localhost:8000
+      - http://localhost:18000
+      secret: ZXhhbXBsZS1hcHAtc2VjcmV0   
     - id: hive-login
       redirectURIs:
       - 'https://idp.do.storageos.net/dex/callback'
       - 'https://idp.do.storageos.net/callback'
       name: 'Hive login'
       secret: ZXhhbXBsZS1hcHAtc2VjcmV0
-
     enablePasswordDB: true
     staticPasswords:
     - email: "admin@example.com"
